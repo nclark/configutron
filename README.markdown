@@ -1,7 +1,7 @@
 configutron
 ===========
 
-configutron is a rails gemplugin for simple, application wide configuration variables specific to a rails environment. there are a grip of projects like this; each does it differently, and this is how i like to do it. all the ones I tried seemed too heavy handed. i am publishing this as a convenience for me to use in projects i work on.
+configutron is a rails gemplugin for simple, application wide configuration variables specific to a rails environment. there are a grip of projects like this; each does it differently, and this is how i like to do it. all the ones I tried seemed too heavy handed. i am publishing this as a convenience for myself to use in projects i work on.
 
 usage
 -----
