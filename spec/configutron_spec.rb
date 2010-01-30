@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 RAILS_ROOT = File.join(File.dirname(__FILE__), 'fake_rails_root')
-RAILS_ENV  = 'development'
+RAILS_ENV = 'test'
 
 describe Configutron do
   before do
-    @fixture_path = File.expand_path(File.dirname(__FILE__) + "/fake_rails_root/config/settings/development.yml")
+    @fixture_path = File.expand_path(File.dirname(__FILE__) + "/fake_rails_root/config/settings/test.yml")
   end
   
   describe "module methods" do
