@@ -59,6 +59,10 @@ describe Configutron do
         Configutron.my_hash.one.should == 1
         Configutron.my_hash.two.should == 2
       end
+      
+      specify "erb values work" do
+        Configutron.my_erb_variable.should == 3
+      end
     end
     
     describe "nested settings" do
@@ -71,6 +75,6 @@ describe Configutron do
           Configutron.four.five.six.should == 6
         end
       end
-    end    
+    end
   end
 end

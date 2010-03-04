@@ -1,5 +1,6 @@
 require 'yaml'
 require 'ostruct'
+require 'erb'
 require 'core_ext'
 
 module Configutron
@@ -23,9 +24,9 @@ module Configutron
     env_settings_path = File.expand_path("#{RAILS_ROOT}/config/settings/#{RAILS_ENV}.yml")
     
     if File.exist?(settings_path)
-      @configutron = YAML.load_file(settings_path)[RAILS_ENV].symbolize_keys
+      @configutron = YAML.load(ERB.new(File.read(settings_path)).result)[RAILS_ENV].symbolize_keys
     elsif File.exists?(env_settings_path)
-      @configutron = YAML.load_file(env_settings_path).symbolize_keys
+      @configutron = YAML.load(ERB.new(File.read(env_settings_path)).result).symbolize_keys
     else
       raise IOError, "Create either config/settings.yml or config/settings/RAILS_ENV.yml"
     end

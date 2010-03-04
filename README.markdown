@@ -71,21 +71,24 @@ try it out:
     >> App.variable
     => "value"
 
+also
+----
+*   erb works
+
 inspiration
 -----------
-* [Christopher J. Bottaro](http://github.com/cjbottaro/app_config/)'s app_config
-* [Brian Smith](http://swig505.com)
+*   [Christopher J. Bottaro](http://github.com/cjbottaro/app_config/)'s app_config
+*   [Brian Smith](http://swig505.com)
 
 note on patches/pull requests
 -----------------------------
-* fork the project.
-* make your feature addition or bug fix.
-* add tests for it. this is important so i don't break it in a
-  future version unintentionally.
-* commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself i can ignore when i pull)
-* send me a pull request. bonus points for topic branches.
-
+*   fork the project.
+*   make your feature addition or bug fix.
+*   add tests for it. this is important so i don't break it in a
+    future version unintentionally.
+*   commit, do not mess with rakefile, version, or history.
+    (if you want to have your own version, that is fine but bump version in a commit by itself i can ignore when i pull)
+*   send me a pull request. bonus points for topic branches.
 
 copyright
 ---------

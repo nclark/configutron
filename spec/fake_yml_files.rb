@@ -23,6 +23,8 @@ two:
 four:
   five:
     six: 6
+    
+my_erb_variable: <%= 1 + 2 %>
 END_SETTINGS
 
 SETTINGS_YML = <<-END_SETTINGS
