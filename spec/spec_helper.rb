@@ -3,41 +3,32 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'configutron'
 require 'spec'
 require 'spec/autorun'
+require 'fake_yml_files'
 
 require 'rubygems'
 require 'active_support'
 require 'fakefs/spec_helpers'
 
 def mock_test_yml
+  path = '/rails_root/config/settings/test.yml'
+  
   FileUtils.mkdir_p('/rails_root/config/settings')
-  File.open('/rails_root/config/settings/test.yml', 'w') do |f|
-    f.puts <<-END_SETTINGS
-    file: test.yml
-    
-    some_variable: some value
+  File.open(path, 'w') do |f|
+    f.puts TEST_YML
+  end
+end
 
-    my_string: string
+def mock_settings_yml
+  FileUtils.mkdir_p('/rails_root/config')
+  File.open('/rails_root/config/settings.yml', 'w') do |f|
+    f.puts SETTINGS_YML
+  end
+end
 
-    my_integer: 1
-
-    my_array:
-      - 1
-      - 2
-      - 3
-      - 4
-
-    my_hash:
-      one: 1
-      two: 2
-
-    two:
-      three: 3
-
-    four:
-      five:
-        six: 6
-END_SETTINGS
-    
-    Configutron.stub!(:settings_path).and_return("/rails_root/config/settings/test.yml")
+def reset!
+  FileUtils.rm_rf('/rails_root')
+  
+  Configutron.instance_eval do
+    @configutron = nil
   end
 end

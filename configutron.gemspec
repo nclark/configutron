@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{configutron}
-  s.version = "0.2.1"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Neal Clark"]
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "lib/core_ext.rb",
      "rails/init.rb",
      "spec/configutron_spec.rb",
+     "spec/fake_yml_files.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -36,6 +37,7 @@ Gem::Specification.new do |s|
   s.summary = %q{simple app-wide settings for rails apps}
   s.test_files = [
     "spec/configutron_spec.rb",
+     "spec/fake_yml_files.rb",
      "spec/spec_helper.rb"
   ]
 

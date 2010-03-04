@@ -27,7 +27,7 @@ begin
        "spec/configutron_spec.rb",
        "spec/spec.opts",
        "spec/spec_helper.rb",
-       "spec/fake_rails_root/config/settings/development.yml"
+       "spec/fake_yml_files.rb"
     ]
   end
   Jeweler::GemcutterTasks.new
