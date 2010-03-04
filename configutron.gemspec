@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Neal Clark"]
-  s.date = %q{2010-01-30}
+  s.date = %q{2010-03-03}
   s.description = %q{simple app-wide settings for rails applications}
   s.email = %q{nclark@thrownproject.com}
   s.extra_rdoc_files = [
@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
      "lib/core_ext.rb",
      "rails/init.rb",
      "spec/configutron_spec.rb",
-     "spec/fake_rails_root/config/settings/development.yml",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
@@ -48,15 +47,18 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<activesupport>, [">= 0"])
       s.add_runtime_dependency(%q<activesupport>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_development_dependency(%q<fakefs>, [">= 0.2.1"])
     else
       s.add_dependency(%q<activesupport>, [">= 0"])
       s.add_dependency(%q<activesupport>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_dependency(%q<fakefs>, [">= 0.2.1"])
     end
   else
     s.add_dependency(%q<activesupport>, [">= 0"])
     s.add_dependency(%q<activesupport>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
+    s.add_dependency(%q<fakefs>, [">= 0.2.1"])
   end
 end
 

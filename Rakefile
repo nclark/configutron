@@ -13,6 +13,8 @@ begin
     gem.add_dependency "activesupport", ">= 0"
     gem.add_runtime_dependency "activesupport", ">= 0"
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_development_dependency "fakefs", ">= 0.2.1"
+    
     gem.files = [
        ".gitignore",
        "LICENSE",
