@@ -80,6 +80,10 @@ inspiration
 *   [Christopher J. Bottaro](http://github.com/cjbottaro/app_config/)'s app_config
 *   [Brian Smith](http://swig505.com)
 
+thanks
+------
+*   [Todd Siegel and MerchLuv](http://merchluv.com)
+
 note on patches/pull requests
 -----------------------------
 *   fork the project.
