@@ -17,7 +17,7 @@ you have two options for specifying settings.
 1.  one file (_config/settings.yml_) 
 2.  one file per environment (_config/settings/environment\_name.yml_)
 
-option 1 takes presedence; that is, if _config/settings.yml_ exists, it will be used, and the _config/settings_ directory will be ignored.
+option 1 takes precedence; that is, if _config/settings.yml_ exists, it will be used, and the _config/settings_ directory will be ignored.
 
 config/settings.yml
 -------------------
