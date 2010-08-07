@@ -4,10 +4,16 @@ require 'configutron'
 require 'spec'
 require 'spec/autorun'
 require 'fake_yml_files'
+require 'pathname'
 
 require 'rubygems'
-require 'active_support'
 require 'fakefs/spec_helpers'
+
+begin
+  require 'active_support/hash_with_indifferent_access'
+rescue LoadError
+  require 'active_support'
+end
 
 def mock_test_yml
   path = '/rails_root/config/settings/test.yml'
@@ -30,5 +36,15 @@ def reset!
   
   Configutron.instance_eval do
     @configutron = nil
+  end
+end
+
+module Rails
+  def self.root
+    @root ||= Pathname.new('/rails_root')
+  end
+  
+  def self.env
+    'test'
   end
 end

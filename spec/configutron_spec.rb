@@ -1,11 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-RAILS_ROOT = '/rails_root/'
-RAILS_ENV = 'test'
 
 describe Configutron do
   include FakeFS::SpecHelpers
+
   after(:each) { reset! }
-  
+
   describe "module methods" do
     describe ".constant=" do
       it "should alias the Configutron constant to something you actually want to use" do

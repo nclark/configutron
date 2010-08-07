@@ -1,16 +1,23 @@
 configutron
 ===========
 
-configutron is a rails gemplugin for simple, application wide settings. there are tons of projects like this; each does it differently, and this is how i like to do it. all the ones I tried seemed too heavy handed. i am publishing this as a convenience for myself to use in projects i work on.
+configutron is a rails gem for simple, application wide settings. there are tons of projects like this; each does it differently, and this is how i like to do it. all the ones I tried seemed too heavy handed. i am publishing this as a convenience for myself to use in projects i work on.
+
+tested on rails 2.3.5, 2.3.8, and 3.0.0.rc
 
 usage
 -----
 
-use the gem in your rails project:
+in non-bundler rails projects:
 
     Rails::Initializer.run do |config|
 	  config.gem 'configutron'
 	end
+
+in your Gemfile
+
+    gem 'configutron'
+
 
 you have two options for specifying settings. 
 
@@ -56,12 +63,8 @@ try it out:
 
 name it something easier to type:
 ---------------------------------
-back in _environment.rb_
+_config/initializers/configutron.rb_
 
-    Rails::Initializer.run do |config|
-      config.gem 'configutron'
-    end
-    
     Configutron.constant = 'App'
 
 try it out:

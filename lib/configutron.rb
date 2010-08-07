@@ -20,11 +20,11 @@ module Configutron
   end
   
   def setup
-    settings_path     = File.expand_path("#{RAILS_ROOT}/config/settings.yml")
-    env_settings_path = File.expand_path("#{RAILS_ROOT}/config/settings/#{RAILS_ENV}.yml")
+    settings_path     = File.expand_path(Rails.root.join('config', 'settings.yml'))
+    env_settings_path = File.expand_path(Rails.root.join('config', 'settings', "#{Rails.env}.yml"))
     
     if File.exist?(settings_path)
-      @configutron = YAML.load(ERB.new(File.read(settings_path)).result)[RAILS_ENV].symbolize_keys
+      @configutron = YAML.load(ERB.new(File.read(settings_path)).result)[Rails.env].symbolize_keys
     elsif File.exists?(env_settings_path)
       @configutron = YAML.load(ERB.new(File.read(env_settings_path)).result).symbolize_keys
     else
