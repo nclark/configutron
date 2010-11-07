@@ -14,21 +14,11 @@ begin
     gem.add_runtime_dependency "activesupport", ">= 0"
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "fakefs", ">= 0.2.1"
-    
-    gem.files = [
-       ".gitignore",
-       "LICENSE",
-       "README.markdown",
-       "Rakefile",
-       "VERSION",
-       "lib/configutron.rb",
-       "lib/core_ext.rb",
-       "rails/init.rb",
-       "spec/configutron_spec.rb",
-       "spec/spec.opts",
-       "spec/spec_helper.rb",
-       "spec/fake_yml_files.rb"
-    ]
+
+    gem.files         = `git ls-files`.split("\n")
+    gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+    gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+    gem.require_paths = ["lib"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

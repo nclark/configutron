@@ -1,7 +1,8 @@
 require 'yaml'
 require 'ostruct'
 require 'erb'
-require 'core_ext'
+
+require File.expand_path(File.join(File.dirname(__FILE__), 'configutron', 'core_ext'))
 
 module Configutron
   extend self
